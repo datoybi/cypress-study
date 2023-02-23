@@ -11,7 +11,9 @@ describe("contact form", () => {
       expect(el.text()).to.eq("Send Message");
     });
 
+    // cy.screenshot(); // 스크린샷
     cy.get('[data-cy="contact-input-email"]').type("test@example.com{enter}");
+    // cy.screenshot(); // 스크린샷
 
     // cy.get('[data-cy="contact-btn-submit"]')
     //   .contains("Send Message")
@@ -34,25 +36,28 @@ describe("contact form", () => {
 
     // p태그에 빨간색 처리 되는 스타일 테스트
     cy.get('[data-cy="contact-btn-submit"]').contains("Send Message");
-    cy.get('[data-cy="contact-input-message"]').blur();
-    cy.get('[data-cy="contact-input-message"]')
+    cy.get('[data-cy="contact-input-message"]').as("msgInput");
+    cy.get("@msgInput").blur();
+    cy.get("@msgInput")
       .parent()
-      .then((el) => {
-        expect(el.attr("class")).to.contains("invalid");
-      });
+      .should("have.attr", "class")
+      .and("match", /invalid/);
+    // .then((el) => {
+    //   expect(el.attr("class")).to.contains("invalid");
+    // });
 
     cy.get('[data-cy="contact-input-name"]').focus().blur();
     cy.get('[data-cy="contact-input-name"]')
       .parent()
-      .then((el) => {
-        expect(el.attr("class")).to.contains("invalid");
-      });
+      .should("have.attr", "class")
+      .and("match", /invalid/);
 
     cy.get('[data-cy="contact-input-email"]').focus().blur();
     cy.get('[data-cy="contact-input-email"]')
       .parent()
-      .then((el) => {
-        expect(el.attr("class")).to.contains("invalid");
+      .should((el) => {
+        expect(el.attr("class")).not.to.be.undefined;
+        expect(el.attr("class")).to.contain("invalid");
       });
   });
 });
