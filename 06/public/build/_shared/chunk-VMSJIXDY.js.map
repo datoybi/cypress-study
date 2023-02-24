@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["empty-module:../data/prisma.server", "../../../app/components/Takeaways.jsx"],
+  "sourcesContent": ["module.exports = {};", "function Takeaways({ items }) {\n  return (\n    <ul className='grid grid-cols-2 gap-8 max-w-2xl mx-auto my-12'>\n      {items.map((item) => (\n        <li key={item.id} data-cy=\"takeaway-item\">\n          <article className='bg-slate-800 rounded-md p-8'>\n            <h3 className='font-bold text-lg mb-2 text-blue-400'>{item.title}</h3>\n            <p className='text-slate-400'>{item.body}</p>\n          </article>\n        </li>\n      ))}\n    </ul>\n  );\n}\n\nexport default Takeaways;\n"],
+  "mappings": ";;;;;;;;;AAAA;AAAA;AAAA,WAAO,UAAU,CAAC;AAAA;AAAA;;;ACMN;AANZ,SAAS,UAAU,EAAE,MAAM,GAAG;AAC5B,SACE,mDAAC,QAAG,WAAU,kDACX,gBAAM,IAAI,CAAC,SACV,mDAAC,QAAiB,WAAQ,iBACxB,6DAAC,aAAQ,WAAU,+BACjB;AAAA,uDAAC,QAAG,WAAU,wCAAwC,eAAK,SAA3D;AAAA;AAAA;AAAA;AAAA,WAAiE;AAAA,IACjE,mDAAC,OAAE,WAAU,kBAAkB,eAAK,QAApC;AAAA;AAAA;AAAA;AAAA,WAAyC;AAAA,OAF3C;AAAA;AAAA;AAAA;AAAA,SAGA,KAJO,KAAK,IAAd;AAAA;AAAA;AAAA;AAAA,SAKA,CACD,KARH;AAAA;AAAA;AAAA;AAAA,SASA;AAEJ;AAEA,IAAO,oBAAQ;",
+  "names": []
+}
