@@ -9,8 +9,8 @@
     "dev:css": "tailwindcss -w -i ./styles/tailwind.css -o app/styles/tailwind.css",
     "start": "remix-serve build",
     "typecheck": "tsc",
-    "test": "dotenv -e .env npx prisma db push && concurrently \"npm run dev:css\" \"dotenv -e .env remix dev\" \"dotenv -e .env cypress run\"",
-    "test:open": "dotenv -e .env npx prisma db push && concurrently \"npm run dev:css\" \"dotenv -e .env remix dev\" \"dotenv -e .env cypress open\""
+    "test": "dotenv -e .env.test npx prisma db push && concurrently \"npm run dev:css\" \"dotenv -e .env remix dev\" \"dotenv -e .env cypress run\"",
+    "test:open": "dotenv -e .env.test npx prisma db push && concurrently \"npm run dev:css\" \"dotenv -e .env remix dev\" \"dotenv -e .env cypress open\""
   },
   "dependencies": {
     "@prisma/client": "^4.3.1",

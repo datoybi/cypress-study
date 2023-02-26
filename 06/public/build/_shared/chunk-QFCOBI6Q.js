@@ -7631,7 +7631,7 @@ function convertRouterFetcherToRemixFetcher(fetcherRR) {
   return fetcher;
 }
 var LiveReload = false ? () => null : function LiveReload2({
-  port = Number(8002),
+  port = Number(58937),
   timeoutMs = 1e3,
   nonce = void 0
 }) {
@@ -8077,4 +8077,4 @@ export {
   ScrollRestoration2 as ScrollRestoration,
   require_jsx_dev_runtime
 };
-//# sourceMappingURL=/build/_shared/chunk-43ZBSOTS.js.map
+//# sourceMappingURL=/build/_shared/chunk-QFCOBI6Q.js.map

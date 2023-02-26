@@ -2,7 +2,7 @@ import {
   RemixBrowser,
   require_jsx_dev_runtime,
   require_react
-} from "/build/_shared/chunk-43ZBSOTS.js";
+} from "/build/_shared/chunk-QFCOBI6Q.js";
 import {
   __commonJS,
   __toESM
@@ -21105,4 +21105,4 @@ if (typeof requestIdleCallback === "function") {
 } else {
   setTimeout(hydrate, 1);
 }
-//# sourceMappingURL=/build/entry.client-IKI6GPC2.js.map
+//# sourceMappingURL=/build/entry.client-EMAYSOVE.js.map
